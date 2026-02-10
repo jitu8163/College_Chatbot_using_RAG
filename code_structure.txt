@@ -1,0 +1,32 @@
+RAG_langchain/
+│
+├── dataset/                     # Your PDFs (same)
+│
+├── engest.py                    # Ingestion (same)
+├── rag.py                       # RAG logic (same, reused)
+├── query.py                     # CLI test (optional now)
+│
+├── backend/
+│   ├── main.py                  # FastAPI server
+│   ├── history_store.py         # File-based chat history
+│   ├── chat_history.json        # Persistent memory (auto-created)
+│   └── __init__.py
+│
+├── frontend/                    # Next.js UI (ChatGPT-like)
+│   ├── app/
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   │
+│   ├── components/
+│   │   ├── ChatWindow.tsx
+│   │   ├── HistoryPanel.tsx     # Toggleable history
+│   │   ├── ChatInput.tsx
+│   │   └── MessageBubble.tsx
+│   │
+│   ├── lib/api.ts               # Backend API calls
+│   ├── package.json
+│   └── tailwind.config.js
+│
+├── requirements.txt
+├── .env
+└── README.md
